@@ -3,15 +3,14 @@ tailwind.config = {
 	theme: {
 		extend: {
 			colors: {
-				darkBrown: "hsl(25, 47%, 15%)",
-				mediumBrown: "hsl(28, 10%, 53%)",
-				cream: "hsl(27, 66%, 92%)",
-				veryPaleOrange: "hsl(33, 100%, 98%)",
-				softRed: "hsl(10, 79%, 65%)",
-				cyan: "hsl(186, 34%, 60%)",
+				primaryTomato: "hsl(4, 100%, 67%)",
+				darkSlateGrey: "hsl(234, 29%, 20%)",
+				charcoalGrey: "hsl(235, 18%, 26%)",
+				grey: "hsl(231, 7%, 60%)",
+				white: "hsl(0, 0%, 100%)",
 			},
 			fontFamily: {
-				DMSans: ["DM Sans", "sans-serif"],
+				sans: "Roboto, sans-serif",
 			},
 			screens: {
 				tsf: "375px",
