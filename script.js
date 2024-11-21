@@ -8,6 +8,7 @@ const signupPage = document.querySelector(".signup");
 const successPage = document.querySelector(".success");
 
 const errorClass = "error";
+const activeClass = "active";
 
 function validateEmail(email) {
 	if (!email) return "Email is required";
@@ -27,13 +28,19 @@ function handleSignupFormSubmit(e) {
 		emailErrorMessageElement.innerText = emailErrorMessage;
 		form.classList.add(errorClass);
 	} else {
+		const textEmail = document.getElementById("success__email");
+		textEmail.innerText = email.value;
+		signupPage.classList.remove(activeClass);
 		signupPage.style.display = "none";
+		successPage.classList.add(activeClass);
 		successPage.style.display = "flex";
 	}
 }
 
 function handleDismissMsg(e) {
+	signupPage.classList.add(activeClass);
 	signupPage.style.display = "flex";
+	successPage.classList.remove(activeClass);
 	successPage.style.display = "none";
 	email.value = "";
 }

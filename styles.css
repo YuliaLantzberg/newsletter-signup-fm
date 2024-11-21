@@ -97,24 +97,54 @@ h6 {
 
 /* ----End Reset------ */
 
+/* Common styles */
+
 body {
 	font-size: 1rem;
 	font-weight: var(--fw-regular);
 	font-family: var(--ff-regular);
 	height: 100dvh;
 	display: grid;
-	place-items: center;
-	background-color: var(--charcoal-grey-800);
+	align-items: flex-start;
+	justify-content: center;
 }
 
 main {
 	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-height: 100%;
 }
 
-/* .signup {
-	display: none;
-} */
+.btn {
+	padding: 0.75rem 1rem;
+	border-radius: 0.35rem;
+	border: none;
+	color: var(--white);
+	background-color: var(--slate-grey-800);
+	cursor: pointer;
+	transition: all 0.3s;
+}
 
+.btn:hover {
+	margin-top: -0.5rem;
+	margin-bottom: 0rem;
+	background-color: var(--tomato);
+	box-shadow: 0px 0.5rem 1rem 0px var(--tomato);
+}
+
+/* End Common styles */
+
+/* Signup Styles */
+.signup {
+	display: none;
+}
+
+.signup.active {
+	display: flex;
+	flex-direction: column;
+}
 .signup__content {
 	display: grid;
 	padding: var(--standard-padding);
@@ -188,24 +218,15 @@ main {
 	border: solid 2px var(--tomato);
 }
 
-.btn {
-	padding: 0.75rem 1rem;
-	border-radius: 0.35rem;
-	border: none;
-	color: var(--white);
-	background-color: var(--slate-grey-800);
-	cursor: pointer;
-	transition: all 0.3s;
-}
+/* End Signup Styles */
 
-.btn:hover {
-	margin-top: -0.5rem;
-	margin-bottom: 0rem;
-	background-color: var(--tomato);
-	box-shadow: 0px 0.5rem 1rem 0px var(--tomato);
-}
+/* Success Styles */
 
 .success {
+	display: none;
+}
+
+.success.active {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -234,13 +255,20 @@ main {
 	margin-bottom: -8rem;
 }
 
+/* End Success Styles */
+
 @media (min-width: 38rem) {
+	body {
+		background-color: var(--charcoal-grey-800);
+		align-items: center;
+	}
 	main {
 		max-width: 58rem;
 		padding: 1rem;
 		border-radius: 2rem;
 	}
-	.signup {
+
+	.signup.active {
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: center;
@@ -252,7 +280,8 @@ main {
 		border-radius: 0;
 	}
 
-	.success {
+	.success.active {
+		display: flex;
 		max-width: 25rem;
 		max-height: 25rem;
 		padding: 1rem;
