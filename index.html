@@ -55,14 +55,17 @@
 						<li class="signup__list-item">And much more!</li>
 					</ul>
 					<form class="signup__form">
-						<label class="signup__form-label" for="email">Email address</label>
+						<label class="signup__form-label" for="email"
+							>Email address <span class="signup__form-label--error"></span
+						></label>
 						<input
-							type="email"
+							type="text"
 							id="email"
 							class="signup__form-input"
 							placeholder="email@company.com"
+							autofocus
 						/>
-						<button class="signup__button">
+						<button type="submit" class="btn">
 							Subscribe to monthly newsletter
 						</button>
 					</form>
@@ -87,7 +90,7 @@
 					</p>
 				</div>
 
-				<button class="success__button">Dismiss message</button>
+				<button class="btn" id="dismiss-msg">Dismiss message</button>
 
 				<!-- Success message end -->
 			</section>
