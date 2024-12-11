@@ -231,7 +231,7 @@ main {
 	flex-direction: column;
 	justify-content: space-around;
 	padding: var(--standard-padding);
-	display: none;
+	/* display: none; */
 }
 
 .success__content {

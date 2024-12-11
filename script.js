@@ -31,17 +31,17 @@ function handleSignupFormSubmit(e) {
 		const textEmail = document.getElementById("success__email");
 		textEmail.innerText = email.value;
 		signupPage.classList.remove(activeClass);
-		signupPage.style.display = "none";
+		// signupPage.style.display = "none";
 		successPage.classList.add(activeClass);
-		successPage.style.display = "flex";
+		// successPage.style.display = "flex";
 	}
 }
 
 function handleDismissMsg(e) {
 	signupPage.classList.add(activeClass);
-	signupPage.style.display = "flex";
+	// signupPage.style.display = "flex";
 	successPage.classList.remove(activeClass);
-	successPage.style.display = "none";
+	// successPage.style.display = "none";
 	email.value = "";
 }
 
