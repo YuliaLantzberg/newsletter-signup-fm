@@ -13,7 +13,7 @@ const activeClass = "active";
 function validateEmail(email) {
 	if (!email) return "Email is required";
 
-	const isValidEmail = /^\S+@\S+$/g;
+	const isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 	if (!isValidEmail.test(email)) {
 		return "Valid email required";
 	}
